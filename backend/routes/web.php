@@ -1,18 +1,11 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\WeatherController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/weather/{city}', [WeatherController::class, 'getWeatherByCity']);  // Buscar previsão por cidade
+Route::post('/weather/save', [WeatherController::class, 'saveWeather']);        // Salvar previsão no histórico
+Route::get('/weather/history', [WeatherController::class, 'getHistory']);       // Obter histórico de cidades
+Route::post('/weather/compare', [WeatherController::class, 'compareWeather']);  // Comparar previsões de duas cidades
+Route::post('/weather/save', [WeatherController::class, 'save']);
