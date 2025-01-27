@@ -11,4 +11,8 @@ OBS: Estrutura responsiva.
 O projeto foi criado separando o backend do frontend, garantindo dessa forma maior organização de código.
 No backend, utilizamos PHP/Laravel, conforme requisito do desafio. No frontend, as escolhas foram HTML/CSS E Javascript (React), Bootstrap também facilitou o processo. Utilizamos AXIOS para comunicação entre front e back facilitando as requisições assincronas.
 
-# GIFs Demonstrativos
+# GIFs e Prints Demonstrativos
+![image](https://github.com/user-attachments/assets/00463ce0-ce15-469b-9ede-fc811ac6f596)
+![image](https://github.com/user-attachments/assets/89ca6e45-f3d7-4c2a-93ed-0bce3c302f8c)
+![msedge_Ly9LFcZZP2](https://github.com/user-attachments/assets/d41c116d-715d-416b-9dd0-6ad777ed8d6a)
+
