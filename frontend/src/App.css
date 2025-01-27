@@ -1,42 +1,193 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
+.card-body {
+  padding: 2rem !important;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:'Helvetica' !important;
+  color: rgb(89, 89, 89) !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.067);
+}
+
+#background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.bg-light-transparent {
+  background-color: rgba(2, 0, 0, 0.05); 
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(0, 0, 0, 0.158);
+  border-radius: 15px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.weather_animated {
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  background-color: rgba(255, 255, 255, 0.095);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#id_weather_animated {
+  color: white !important;
+}
+
+.current-weather, .forecast {
+  margin-bottom: 20px;
+}
+
+.forecast-cards {
+  display: flex;
+  gap: 15px;
+}
+
+.forecast-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 120px;
+  text-align: center;
+}
+
+.weather-icon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif !important;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: 500; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease; 
+}
+
+.btn-dark:hover {
+  background-color: #555; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-dark:active {
+  background-color: #222; 
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+  transform: translateY(1px); 
+}
+
+.btn-red {
+  background-color: #c90303 !important; 
+  color: #fff; 
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  font-weight: 500; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); 
+  transition: all 0.3s ease;
+}
+
+.btn-red:hover {
+  background-color: #ff392b !important; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5); 
+  transform: translateY(-3px); 
+}
+
+.btn-red:active {
+  background-color: #b71c1c; 
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2); 
+  transform: translateY(1px); 
+}
+
+/* Quebra nas telas menores, para ajustar as margens desalinhasdas. */
+@media (max-width: 768px) {
+
+  input {
+  margin-bottom: 5px !important;
+  }
+
+  .card-body {
+    margin-bottom: 10px !important;
+  }
+
+}
+
+input.form-control {
+  color: #929292;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.232);
+}
+
+.modal-content {
+  /* background-color: #333 !important; */
+  /* justify-content: center; */
+}
+
+.header-dark {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 8px 8px;
+}
+
+.header-dark .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-dark .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-dark .nav button {
+  margin-left: 10px;
+}
+
+.footer-dark {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.footer-dark p {
+  margin: 0;
+  font-size: 14px;
 }
